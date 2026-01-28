@@ -1,0 +1,20 @@
+{
+    "name": "vite-plugin-zero-downtime",
+    "version": "1.0.0",
+    "description": "A Vite plugin to enable zero downtime deployments.",
+    "author": "HasanQQ",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "build": "tsup"
+    },
+    "devDependencies": {
+        "@types/node": "^25.0.10",
+        "tsup": "^8.5.1",
+        "typescript": "^5.9.3",
+        "vite": "^7.3.1"
+    },
+    "peerDependencies": {
+        "vite": "^5.0.0 || ^6.0.0 || ^7.0.0"
+    }
+}
