@@ -5,5 +5,8 @@
     "prettier.enable": true,
     "[javascript][typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json][jsonc][yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
