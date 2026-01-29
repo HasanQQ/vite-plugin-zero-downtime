@@ -14,10 +14,10 @@ type TPluginContext = {
     };
 };
 
-export default function pluginZeroDowntime(config: TPluginConfig): Plugin[] {
+export default function pluginZeroDowntime(config?: TPluginConfig): Plugin[] {
     // set default directory names if not provided
-    const DIR_CURRENT = config.currentDir || "current";
-    const DIR_RELEASE = config.releaseDir || "release";
+    const DIR_CURRENT = config?.currentDir || "current";
+    const DIR_RELEASE = config?.releaseDir || "release";
 
     // context to hold directory paths during the build process
     let context: TPluginContext;
