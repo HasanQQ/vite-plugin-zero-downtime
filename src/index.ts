@@ -68,9 +68,18 @@ export default function pluginZeroDowntime(config: TPluginConfig): Plugin[] {
                 const current = path.resolve(context.directories.current);
                 const release = path.resolve(context.directories.release);
 
-                if ((await fs.stat(current)).isSymbolicLink()) {
-                    await fs.unlink(current);
-                }
+                await fs
+                    .stat(current)
+                    .then(async (stat) => {
+                        if (stat.isSymbolicLink()) {
+                            await fs.unlink(current);
+                        } else {
+                            await fs.rm(current, { recursive: true, force: true });
+                        }
+                    })
+                    .catch(() => {
+                        // file/directory/symlink does not exist, no action needed
+                    });
 
                 await fs.symlink(release, current, "dir");
             },
