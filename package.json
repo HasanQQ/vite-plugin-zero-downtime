@@ -2,9 +2,29 @@
     "name": "vite-plugin-zero-downtime",
     "version": "1.0.0",
     "description": "A Vite plugin to enable zero downtime deployments.",
-    "author": "HasanQQ",
+    "keywords": [
+        "vite",
+        "vite-plugin",
+        "zero-downtime",
+        "deployment"
+    ],
+    "homepage": "https://github.com/HasanQQ/vite-plugin-zero-downtime#readme",
+    "bugs": {
+        "url": "https://github.com/HasanQQ/vite-plugin-zero-downtime/issues"
+    },
     "license": "MIT",
+    "author": "HasanQQ",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HasanQQ/vite-plugin-zero-downtime.git"
+    },
+    "files": [
+        "dist"
+    ],
     "type": "module",
+    "exports": {
+        ".": "./dist/index.js"
+    },
     "scripts": {
         "build": "tsup"
     },
