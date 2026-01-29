@@ -1,5 +1,9 @@
 # vite-plugin-zero-downtime
 
+[![NPM Version](https://img.shields.io/npm/v/vite-plugin-zero-downtime.svg)](https://www.npmjs.com/package/vite-plugin-zero-downtime)
+[![NPM Downloads](https://img.shields.io/npm/dm/vite-plugin-zero-downtime.svg)](https://www.npmjs.com/package/vite-plugin-zero-downtime)
+[![License](https://img.shields.io/npm/l/vite-plugin-zero-downtime.svg)](LICENSE)
+
 A Vite plugin for zero downtime deployments.
 
 This plugin implements the classic symlink approach to enable seamless application updates without service interruption.
