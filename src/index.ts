@@ -84,5 +84,23 @@ export default function pluginZeroDowntime(config: TPluginConfig): Plugin[] {
                 await fs.symlink(release, current, "dir");
             },
         },
+        {
+            name: "vite-plugin-zero-downtime:build:remove-older-releases",
+            apply: "build",
+            enforce: "post",
+            closeBundle: async () => {
+                if (!context) {
+                    throw new Error("Plugin context is not initialized.");
+                }
+
+                const pattern = path.join(path.dirname(context.directories.release), `${DIR_RELEASE}-*`);
+
+                for await (const dir of fs.glob(pattern)) {
+                    if (dir !== context.directories.release) {
+                        await fs.rm(dir, { recursive: true, force: true });
+                    }
+                }
+            },
+        },
     ];
 }
