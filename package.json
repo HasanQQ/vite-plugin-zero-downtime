@@ -1,6 +1,6 @@
 {
     "name": "vite-plugin-zero-downtime",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Vite plugin to enable zero downtime deployments.",
     "keywords": [
         "vite",
